@@ -12,7 +12,7 @@ async function Page(){
         username: userInfo?.username || user?.username,
         name: userInfo.name || user?.firstName || "",
         bio: userInfo?.bio || "",
-        image: userInfo?.image || user.imageUrl,
+        image: userInfo?.image || user?.imageUrl,
 
     }
     return (
@@ -25,7 +25,7 @@ async function Page(){
                 <AccountProfile 
                     user={userData} 
                     btnTitle="Continue"  
-                    />
+                />
             </section>
         </main>
     )
