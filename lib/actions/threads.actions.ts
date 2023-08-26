@@ -69,7 +69,8 @@ export async function fetchPostById(id: string){
     connectToDB();
     //TODO: Populate community
     try {
-        const thread = await Thread.findById(id).populate({
+        const thread = await Thread.findById(id)
+        .populate({
             path: 'author',
             model: User,
             select: "_id id name image"
@@ -100,7 +101,7 @@ export async function fetchPostById(id: string){
     }
 }
 
-export async function addCommentToThread(threadId: string, commentText: string, path: string,){
+export async function addCommentToThread(threadId: string, commentText: string, userId: string, path: string,){
     connectToDB();
 
     try {

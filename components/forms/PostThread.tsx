@@ -33,7 +33,7 @@ interface Props {
     btnTitle: string;
 }
 
-function PostThread({ userId}: {userId: string} ){
+function PostThread({ userId    }: {userId: string} ){
     const router = useRouter();
     const pathname  = usePathname();
      
